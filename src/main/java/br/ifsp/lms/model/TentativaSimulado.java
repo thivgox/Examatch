@@ -1,8 +1,8 @@
 package br.ifsp.lms.model;
 
 import java.util.Date;
-import br.ifsp.lms.Aluno;
-import br.ifsp.lms.Simulado;
+import br.ifsp.lms.model.Aluno;
+import br.ifsp.lms.model.Simulado;
 
 public class TentativaSimulado {
     

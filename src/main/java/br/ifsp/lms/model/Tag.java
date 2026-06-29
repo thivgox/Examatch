@@ -1,3 +1,5 @@
+package br.ifsp.lms.model;
+
 public class Tag {
     private int id;
     private String nomeConteudo;

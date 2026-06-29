@@ -1,4 +1,5 @@
-import java.util.List;
+package br.ifsp.lms.model;
+import java.util.*;
 
 public class Questao {
     private int id;
@@ -6,7 +7,7 @@ public class Questao {
     private List<String> alternativas;
     private char gabaritoCorreto;
     private String explicacaoErro;
-    private List<Tag> tags;
+    private List<Tag> tags = new ArrayList<>();
 
     public Questao(int id, String enunciado, List<String> alternativas, char gabaritoCorreto, String explicacaoErro) {
         this.id = id;
@@ -65,11 +66,13 @@ public class Questao {
     }
 
     public void vincularTag(Tag tag) {
-        // Implementação para vincular uma tag
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
     public boolean validarObrigatoriedadeTag() {
-        // Implementação para validar obrigatoriedade de tag
-        return false;
+        return this.tags != null && !this.tags.isEmpty();
     }
 }
